@@ -6,7 +6,8 @@
 
 Content lives in content/<lang>/*.md (YAML front matter + Markdown) and
 content/<lang>/home.yml. Change CHECKED when you re-verify the sources,
-and BASE_URL once the domain is bought.
+The public address comes from PR_BASE_URL (default https://profromandie.ch).
+Before the domain exists, the workflow sets it to the GitHub Pages address.
 
 The contact address is never stored in the repository. Without PR_CONTACT_EMAIL,
 pages point readers to the address published on pablocorreaprieto.ch (decision of
@@ -18,6 +19,7 @@ import json
 import os
 import re
 import shutil
+from urllib.parse import urlparse
 import sys
 from pathlib import Path
 
@@ -25,7 +27,8 @@ import markdown
 import yaml
 
 ROOT = Path(__file__).resolve().parent
-BASE_URL = "https://profromandie.ch"  # placeholder until the domain is bought
+BASE_URL = (os.environ.get("PR_BASE_URL") or "https://profromandie.ch").rstrip("/")
+PATH_PREFIX = urlparse(BASE_URL).path.rstrip("/")  # "" on the own domain, "/prof-romandie" on GitHub Pages
 CHECKED = "2026-11-15"                # date the official sources were last checked
 LANGS = [l for l in ["fr", "es", "it"] if (ROOT / "content" / l / "home.yml").exists()]
 PREVIEW = "--preview" in sys.argv
@@ -126,13 +129,13 @@ def url_of(lang, pid):
 def href(cur_file, lang, pid):
     if PREVIEW:
         return os.path.relpath(file_of(lang, pid), start=os.path.dirname(cur_file) or ".")
-    return url_of(lang, pid)
+    return PATH_PREFIX + url_of(lang, pid)
 
 
 def asset(cur_file, path):
     if PREVIEW:
         return os.path.relpath(f"assets/{path}", start=os.path.dirname(cur_file) or ".")
-    return f"/assets/{path}"
+    return f"{PATH_PREFIX}/assets/{path}"
 
 
 def esc(s):
@@ -384,11 +387,11 @@ def render_home(page):
 def render_404():
     items = []
     for l in LANGS:
-        root = "/" if l == "fr" else f"/{l}/"
+        root = PATH_PREFIX + ("/" if l == "fr" else f"/{l}/")
         items.append(f'<li lang="{l}"><a href="{root}">{esc(UI[l]["nf_title"])}. {esc(UI[l]["back_home"])}</a></li>')
     return f"""<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 | Prof Romandie</title><meta name="robots" content="noindex"><link rel="stylesheet" href="/assets/site.css"></head>
+<title>404 | Prof Romandie</title><meta name="robots" content="noindex"><link rel="stylesheet" href="{PATH_PREFIX}/assets/site.css"></head>
 <body><main id="main" class="article"><h1 class="title">404</h1><ul class="nf">{''.join(items)}</ul></main></body></html>
 """
 

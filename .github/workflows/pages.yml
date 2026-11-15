@@ -28,6 +28,11 @@ jobs:
           # Optional repository variable. Empty means readers are sent to the
           # address published on pablocorreaprieto.ch.
           PR_CONTACT_EMAIL: ${{ vars.PR_CONTACT_EMAIL }}
+          # Public address of the site. Until profromandie.ch is bought and set
+          # as the Pages custom domain, it is the GitHub Pages address below.
+          # Afterwards, set the repository variable PR_BASE_URL to
+          # https://profromandie.ch (or delete this fallback).
+          PR_BASE_URL: ${{ vars.PR_BASE_URL || 'https://pablocorreaprieto.ch/prof-romandie' }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
