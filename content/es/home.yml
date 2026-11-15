@@ -1,0 +1,40 @@
+slug: ""
+seo_title: "Dar clase en la Suiza francófona | Prof Romandie"
+description: "Reconocimiento CDIP, nivel de francés, plazas y sustituciones, sueldo y permiso. Los trámites en orden, con las fuentes oficiales y una experiencia real."
+h1: "Dar clase en la Suiza francófona con un título extranjero"
+lede: "Los trámites en orden, con los plazos y los costes que publican las autoridades. Escrito por un maestro sustituto del cantón de Vaud que acaba de pasar por ellos."
+stations:
+  - id: cdip
+    title: "Reconocer tu título"
+    fig: "CHF 800"
+    note: "4 meses como máximo con el expediente completo (título UE)"
+  - id: francais
+    title: "Demostrar tu francés"
+    fig: "C2"
+    note: "2 años para presentarlo si tu título es de la UE"
+  - id: poste
+    title: "Encontrar trabajo"
+    fig: "MIREO"
+    note: "la plataforma de sustituciones de Vaud, abierta a cualquier adulto"
+  - id: salaire
+    title: "Entender tu sueldo"
+    fig: "18 clases"
+    note: "la escala de Vaud, paga 13 incluida"
+  - id: permis
+    title: "Instalarte"
+    fig: "14 días"
+    note: "para declararte en el municipio, antes de empezar a trabajar"
+blocks:
+  - h: "Para quién"
+    text: |
+      Para docentes formados fuera de Suiza que quieren trabajar en una escuela pública de la Suiza francófona. Vienes de España, de Latinoamérica o de otro país, y quieres saber por dónde empezar.
+
+      Esta versión no es una simple traducción de la francesa. Añade lo que importa si vienes de España o de Latinoamérica: el Certificado de Conformidad, las ALCE, los títulos de fuera de la UE y la regla de los dos años para el francés.
+  - h: "Cómo lo compruebo"
+    text: |
+      Cada cifra remite a un documento oficial y cada página indica la fecha de su última comprobación. Cuando cuento lo que he vivido, lo señalo como tal.
+
+      ¿Ves un error o un cambio de norma? Escríbeme a {{contact}} y lo corrijo.
+author: |
+  Me llamo Pablo Correa Prieto. Estudié Magisterio de Primaria en la Universidad de La Laguna, en Tenerife. La CDIP reconoció mi título en mayo de 2026 y hoy trabajo como maestro sustituto en el cantón de Vaud.
+author_link: "Leer más"

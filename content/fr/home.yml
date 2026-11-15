@@ -1,0 +1,40 @@
+slug: ""
+seo_title: "Prof Romandie | Enseigner en Suisse romande avec un diplôme étranger"
+description: "Reconnaissance CDIP, niveau de français, postes et remplacements, salaire et permis. Les démarches dans l'ordre, avec les sources officielles."
+h1: "Enseigner en Suisse romande avec un diplôme étranger"
+lede: "Les démarches dans l'ordre, avec les délais et les coûts publiés par les autorités. Écrit par un enseignant remplaçant du canton de Vaud qui vient de les faire."
+stations:
+  - id: cdip
+    title: "Faire reconnaître son diplôme"
+    fig: "CHF 800"
+    note: "4 mois au plus une fois le dossier complet (diplôme UE)"
+  - id: francais
+    title: "Prouver son français"
+    fig: "C2"
+    note: "2 ans pour le fournir si votre diplôme vient de l'UE"
+  - id: poste
+    title: "Trouver un poste"
+    fig: "MIREO"
+    note: "la plateforme vaudoise des remplacements, ouverte à tout adulte"
+  - id: salaire
+    title: "Comprendre son salaire"
+    fig: "18 classes"
+    note: "la grille vaudoise, 13e salaire compris"
+  - id: permis
+    title: "S'installer"
+    fig: "14 jours"
+    note: "pour s'annoncer à la commune, avant le premier jour de travail"
+blocks:
+  - h: "Pour qui"
+    text: |
+      Pour les enseignants formés hors de Suisse qui veulent travailler dans une école publique de Suisse romande. Vous venez de France, de Belgique, d'Espagne, d'Italie ou d'ailleurs, et vous voulez savoir par où commencer.
+
+      Le guide existe aussi en espagnol et en italien. Ce ne sont pas de simples traductions, chaque version ajoute ce qui concerne son public.
+  - h: "Comment c'est vérifié"
+    text: |
+      Chaque chiffre renvoie à un document officiel, et chaque page indique la date de sa dernière vérification. Quand je parle de ce que j'ai vécu, c'est signalé comme tel.
+
+      Vous voyez une erreur ou un changement de règle? Écrivez-moi à {{contact}}, je corrige.
+author: |
+  Je m'appelle Pablo Correa Prieto. J'ai fait ma formation de maître primaire en Espagne, à l'Université de La Laguna. La CDIP a reconnu mon diplôme en mai 2026, et je travaille aujourd'hui comme enseignant remplaçant dans le canton de Vaud.
+author_link: "Lire la suite"

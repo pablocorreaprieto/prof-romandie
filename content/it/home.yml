@@ -1,0 +1,40 @@
+slug: ""
+seo_title: "Prof Romandie | Insegnare nella Svizzera romanda con un titolo estero"
+description: "Riconoscimento CDIP, livello di francese, posti e supplenze, stipendio e permesso. Le pratiche in ordine, con le fonti ufficiali e un'esperienza vera."
+h1: "Insegnare nella Svizzera romanda con un titolo estero"
+lede: "Le pratiche in ordine, con i tempi e i costi pubblicati dalle autorità. Scritto da un insegnante supplente del canton Vaud che le ha appena fatte."
+stations:
+  - id: cdip
+    title: "Far riconoscere il titolo"
+    fig: "CHF 800"
+    note: "al massimo 4 mesi con il dossier completo (titolo UE)"
+  - id: francais
+    title: "Dimostrare il francese"
+    fig: "C2"
+    note: "2 anni per presentarlo se il titolo è dell'UE"
+  - id: poste
+    title: "Trovare lavoro"
+    fig: "MIREO"
+    note: "la piattaforma vodese delle supplenze, aperta a ogni adulto"
+  - id: salaire
+    title: "Capire lo stipendio"
+    fig: "18 classi"
+    note: "la scala vodese, tredicesima compresa"
+  - id: permis
+    title: "Sistemarsi"
+    fig: "14 giorni"
+    note: "per notificarsi al comune, prima di iniziare a lavorare"
+blocks:
+  - h: "Per chi"
+    text: |
+      Per gli insegnanti formati fuori dalla Svizzera romanda che vogliono lavorare in una scuola pubblica francofona. Vieni dall'Italia, dal Ticino o da un altro paese, e vuoi sapere da dove cominciare.
+
+      Questa versione non è una semplice traduzione di quella francese. Aggiunge quello che conta per chi viene dall'Italia o dal Ticino, dai corsi di lingua e cultura italiana al caso dei titoli svizzeri.
+  - h: "Come verifico"
+    text: |
+      Ogni cifra rimanda a un documento ufficiale e ogni pagina indica la data dell'ultima verifica. Quando racconto quello che ho vissuto, lo segnalo come tale.
+
+      Vedi un errore o una regola cambiata? Scrivimi usando {{contact}} e correggo.
+author: |
+  Mi chiamo Pablo Correa Prieto. Mi sono formato come maestro di scuola primaria all'Università di La Laguna, in Spagna. La CDIP ha riconosciuto il mio titolo a maggio 2026 e oggi lavoro come insegnante supplente nel canton Vaud.
+author_link: "Continua a leggere"
