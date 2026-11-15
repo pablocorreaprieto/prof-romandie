@@ -1,6 +1,6 @@
 # Prof Romandie
 
-Guide en français, espagnol et italien pour les enseignants formés à l'étranger qui veulent enseigner en Suisse romande. Auteur Pablo Correa Prieto. Site prévu sur https://profromandie.ch.
+Guide en français, anglais, espagnol et italien pour les enseignants formés à l'étranger qui veulent enseigner en Suisse romande. Auteur Pablo Correa Prieto. Site prévu sur https://profromandie.ch.
 
 ## Construire
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Prof Romandie static site (FR / ES / IT).
+"""Build the Prof Romandie static site (FR / EN / ES / IT).
 
     python3 build.py            production build into site/  (clean URLs, for GitHub Pages)
     python3 build.py --preview  preview build into preview/   (relative .html links, works anywhere)
@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parent
 BASE_URL = (os.environ.get("PR_BASE_URL") or "https://profromandie.ch").rstrip("/")
 PATH_PREFIX = urlparse(BASE_URL).path.rstrip("/")  # "" on the own domain, "/prof-romandie" on GitHub Pages
 CHECKED = "2026-11-15"                # date the official sources were last checked
-LANGS = [l for l in ["fr", "es", "it"] if (ROOT / "content" / l / "home.yml").exists()]
+LANGS = [l for l in ["fr", "en", "es", "it"] if (ROOT / "content" / l / "home.yml").exists()]
 PREVIEW = "--preview" in sys.argv
 OUT = ROOT / ("preview" if PREVIEW else "site")
 CONTACT = os.environ.get("PR_CONTACT_EMAIL", "").strip()
@@ -52,6 +52,21 @@ UI = {
         "nf_title": "Page introuvable", "photo_alt": "Pablo Correa Prieto",
         "no_contact": "l’adresse publiée sur {link}",
         "contact_url": "https://pablocorreaprieto.ch/#contact",
+    },
+    "en": {
+        "locale": "en_GB", "lang_name": "English", "brand_tag": "teaching in French-speaking Switzerland",
+        "home": "Home", "skip": "Skip to content", "step": "Step {n} of 5",
+        "steps_aria": "The five steps", "verified": "Sources checked on 15 November 2026",
+        "read": "{n} min read", "bref": "In short", "exp": "My experience", "warn": "Watch out",
+        "next": "Next step", "back_home": "Back to all the steps",
+        "sources": "Official sources", "sources_note": "Links checked on 15 November 2026.",
+        "about": "Who writes this", "legal": "Legal notice", "langs_aria": "Language",
+        "check_note": "This is my list, not an official one. The boxes you tick stay saved in your browser.",
+        "foot_note": "This guide gives general information. For your own case, the decision of the competent authority prevails.",
+        "ai_note": "Text written with the help of AI, reviewed and approved by the author.",
+        "nf_title": "Page not found", "photo_alt": "Pablo Correa Prieto",
+        "no_contact": "the address published on {link}",
+        "contact_url": "https://pablocorreaprieto.ch/en/#contact",
     },
     "es": {
         "locale": "es_ES", "lang_name": "Español", "brand_tag": "dar clase en la Suiza francófona",

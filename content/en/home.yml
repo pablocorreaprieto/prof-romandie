@@ -1,0 +1,40 @@
+slug: ""
+seo_title: "Prof Romandie | Teaching in French-speaking Switzerland with a foreign diploma"
+description: "CDIP recognition, French level, jobs and supply work, salary and permits. The steps in order, with the official sources."
+h1: "Teaching in French-speaking Switzerland with a foreign diploma"
+lede: "The steps in order, with the deadlines and costs the authorities publish. Written by a supply teacher in the canton of Vaud who has just been through them."
+stations:
+  - id: cdip
+    title: "Get your diploma recognised"
+    fig: "CHF 800"
+    note: "4 months at most once the file is complete (EU diploma)"
+  - id: francais
+    title: "Prove your French"
+    fig: "C2"
+    note: "2 years to provide it if your diploma is from the EU or the UK"
+  - id: poste
+    title: "Find a job"
+    fig: "MIREO"
+    note: "Vaud's supply-teaching platform, open to any adult"
+  - id: salaire
+    title: "Understand your salary"
+    fig: "18 classes"
+    note: "the Vaud pay scale, 13th month included"
+  - id: permis
+    title: "Settle in"
+    fig: "14 days"
+    note: "to register with the commune, before your first day of work"
+blocks:
+  - h: "Who it's for"
+    text: |
+      For teachers trained outside Switzerland who want to work in a state school in French-speaking Switzerland (Romandie). You trained in the UK, Ireland, elsewhere in Europe or further away, and you want to know where to start.
+
+      This version is not a straight translation of the French one. It adds what matters if you read in English, from the rules for UK citizens since Brexit to private and international schools.
+  - h: "How it's checked"
+    text: |
+      Every figure links to an official document, and every page shows the date it was last checked. When I describe what I went through myself, it is marked as such.
+
+      Spotted a mistake or a rule that has changed? Write to me at {{contact}} and I'll fix it.
+author: |
+  My name is Pablo Correa Prieto. I trained as a primary teacher in Spain, at the University of La Laguna. The CDIP recognised my diploma in May 2026, and I now work as a supply teacher in the canton of Vaud.
+author_link: "Read more"
