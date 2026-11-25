@@ -47,3 +47,20 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Tell Bing and the other IndexNow engines which pages changed. Google ignores
+  # IndexNow and still needs Search Console. A manual run submits every page.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python3 .github/scripts/indexnow.py "${{ github.event_name == 'workflow_dispatch' && 'all' || 'changed' }}"
+        env:
+          PR_BASE_URL: ${{ vars.PR_BASE_URL || 'https://pablocorreaprieto.ch/prof-romandie' }}
