@@ -35,7 +35,13 @@ PREVIEW = "--preview" in sys.argv
 OUT = ROOT / ("preview" if PREVIEW else "site")
 CONTACT = os.environ.get("PR_CONTACT_EMAIL", "").strip()
 
-AUTHOR = {"name": "Pablo Correa Prieto", "url": "https://pablocorreaprieto.ch"}
+# Same person as on pablocorreaprieto.ch: "id" is the @id of the Person in that site's JSON-LD,
+# so search engines can tie the guide and the personal site to one author.
+AUTHOR = {"name": "Pablo Correa Prieto", "url": "https://pablocorreaprieto.ch/",
+          "id": "https://pablocorreaprieto.ch/#person"}
+# IndexNow key (Bing, Yandex, Seznam, Naver). Published as /<key>.txt by the build and
+# used by .github/scripts/indexnow.py after each deploy. Do not change it once deployed.
+INDEXNOW_KEY = "0944e1cb191643742ca2fc7f3bd07e84"
 
 UI = {
     "fr": {
@@ -253,6 +259,11 @@ def head(page, cur_file, title, description, og_type="article"):
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{BASE_URL}{url_of(lang, pid)}">
 <meta property="og:locale" content="{UI[lang]['locale']}">
+<meta property="og:image" content="{BASE_URL}/assets/img/og-{lang}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc('Prof Romandie, ' + SITE[lang]['home']['h1'])}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1B2559">
 <link rel="icon" href="{asset(cur_file, 'favicon.svg')}" type="image/svg+xml">
 <link rel="preload" href="{asset(cur_file, 'fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2')}" as="font" type="font/woff2" crossorigin>
@@ -317,7 +328,7 @@ def jsonld_article(page):
         "inLanguage": lang,
         "dateModified": CHECKED,
         "mainEntityOfPage": f"{BASE_URL}{url_of(lang, page['id'])}",
-        "author": {"@type": "Person", "name": AUTHOR["name"], "url": AUTHOR["url"]},
+        "author": {"@type": "Person", "@id": AUTHOR["id"], "name": AUTHOR["name"], "url": AUTHOR["url"]},
         "publisher": {"@type": "Organization", "name": "Prof Romandie"},
     }
     return f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>\n'
@@ -442,6 +453,7 @@ def main():
         (OUT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
         (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
         (OUT / ".nojekyll").write_text("", encoding="utf-8")
+        (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
     print(f"built {count} pages into {OUT.relative_to(ROOT)}/"
           + ("" if CONTACT else "  (contact goes through pablocorreaprieto.ch)"))
 

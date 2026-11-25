@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: "Atkinson Next";
+    font-weight: 200 800;
+    src: url("../../assets/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2") format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212;
+  }
+  @font-face {
+    font-family: "Atkinson Next";
+    font-weight: 200 800;
+    src: url("../../assets/fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2") format("woff2-variations");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C0;
+  }
+  html, body { margin: 0; }
+  body {
+    width: 1200px; height: 630px; box-sizing: border-box; overflow: hidden;
+    font-family: "Atkinson Next", system-ui, sans-serif; color: #1b2559;
+    /* cahier squares */
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(#e6ecf7 1px, transparent 1px),
+      linear-gradient(90deg, #e6ecf7 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: -1px -1px;
+    position: relative;
+  }
+  .margin { position: absolute; left: 96px; top: 0; bottom: 0; width: 2px; background: #b5172a; opacity: .55; }
+  .card { position: absolute; inset: 0; padding: 64px 84px 56px 140px; display: flex; flex-direction: column; }
+  .brand { display: flex; align-items: center; gap: 14px; font-size: 34px; letter-spacing: .01em; }
+  .brand b { font-weight: 800; }
+  .brand span { font-weight: 400; }
+  h1 { font-weight: 750; font-size: 66px; line-height: 1.08; letter-spacing: -0.01em; margin: 58px 0 0; max-width: 960px; text-wrap: balance; }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; font-size: 24px; color: #4a5583; }
+  .ok { display: inline-flex; align-items: center; gap: 10px; color: #1e7547; font-weight: 600; }
+  .who { margin-top: 8px; }
+  .domain { font-weight: 700; color: #1b2559; letter-spacing: .02em; }
+</style>
+</head>
+<body>
+<div class="margin"></div>
+<div class="card">
+  <div class="brand">
+    <svg viewBox="0 0 40 14" width="80" height="28" aria-hidden="true">
+      <line x1="7" y1="7" x2="33" y2="7" stroke="#1b2559" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="7" cy="7" r="5" fill="#ffffff" stroke="#1b2559" stroke-width="3"/>
+      <circle cx="33" cy="7" r="5" fill="#1b2559"/>
+    </svg>
+    <div><b>prof</b> <span>romandie</span></div>
+  </div>
+  <h1 id="h1"></h1>
+  <div class="foot">
+    <div>
+      <div class="ok"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" fill="none" stroke="#1e7547" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="verified"></span></div>
+      <div class="who">Pablo Correa Prieto</div>
+    </div>
+    <div class="domain">profromandie.ch</div>
+  </div>
+</div>
+</body>
+</html>
